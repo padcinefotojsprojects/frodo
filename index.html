@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#101318">
+  <title>Tour Virtual 360°</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="tour" aria-label="Tour virtual panorâmico 360 graus">
+    <canvas id="tour-canvas" aria-label="Visualização panorâmica. Arraste para olhar ao redor."></canvas>
+
+    <div class="loading" id="loading" role="status">Carregando panorama…</div>
+    <div class="error" id="error" role="alert" hidden></div>
+
+    <header class="topbar">
+      <div class="brand">
+        <span class="brand-mark" aria-hidden="true">360</span>
+        <div><strong>Tour virtual</strong><span id="status-text">Panorama interativo</span></div>
+      </div>
+      <button class="icon-button" id="fullscreen-button" type="button" aria-label="Ativar tela cheia" title="Tela cheia">⛶</button>
+    </header>
+
+    <div class="hint" id="hint">Arraste para olhar ao redor</div>
+
+    <nav class="controls" aria-label="Controles do panorama">
+      <button class="control-button" id="left-button" type="button" aria-label="Olhar para a esquerda" title="Esquerda">←</button>
+      <button class="control-button" id="up-button" type="button" aria-label="Olhar para cima" title="Cima">↑</button>
+      <button class="control-button" id="down-button" type="button" aria-label="Olhar para baixo" title="Baixo">↓</button>
+      <button class="control-button" id="right-button" type="button" aria-label="Olhar para a direita" title="Direita">→</button>
+      <span class="control-divider" aria-hidden="true"></span>
+      <button class="control-button" id="zoom-out-button" type="button" aria-label="Diminuir zoom" title="Afastar">−</button>
+      <button class="control-button" id="zoom-in-button" type="button" aria-label="Aumentar zoom" title="Aproximar">+</button>
+      <button class="control-button gyro-button" id="gyro-button" type="button" aria-pressed="false" title="Ativar giroscópio">◎ <span>Sensor</span></button>
+      <button class="control-button" id="reset-button" type="button" title="Voltar à visão inicial">↺ <span>Início</span></button>
+    </nav>
+
+    <div class="bottom-note">Use o mouse, o toque ou os controles para explorar</div>
+  </main>
+  <script src="engine.js" defer></script>
+</body>
+</html>
