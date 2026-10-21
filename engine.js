@@ -8,7 +8,7 @@
  */
 (() => {
   const CONFIG = Object.assign({
-    image: './imagem/frodo.jpg',
+    image: './image/frodo.jpg',
     sphereSegments: 96,
     sphereRings: 48,
     initialYaw: 0,
